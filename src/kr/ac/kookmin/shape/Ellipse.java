@@ -14,11 +14,17 @@ public class Ellipse extends Shape {
     }
 
     public int getSemiMajorAxis(){
-    	return w;
+    	if(w > h)
+    		return w;
+    	else
+    		return h;
     }
     
     public int getSemiMinorAxis(){
-    	return h;
+    	if(w > h)
+    		return h;
+    	else
+    		return w;
     }
     
     @Override
